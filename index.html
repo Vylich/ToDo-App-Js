@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo App Js</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo App Js</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    
+<body class="page">
+  <div class="card">
+    <h1 class="card__title">ToDo приложение</h1>
+    <h2 class="card__description">список задач на сегодня</h2>
+    <div class="card__tasks tasks">
+      <ul id="taskList" class="tasks__wrapper tasks__wrapper--flush">
+        <li id="empty-list" class="tasks__item empty-list">
+          <img src="./img/todo-img.svg" alt="Empty" class="empty-list__img" width="48">
+          <div class="empty-list__title">Список дел пуст</div>
+        </li>
+        <li class="tasks__item task">
+          <span class="task__title">Купить бумагу</span>
+          <div class="task__buttons">
+            <button type="button" data-action="done" class="task__button">
+							<img src="./img/checked.svg" alt="Done" width="18" height="18">
+						</button>
+						<button type="button" data-action="delete" class="task__button">
+							<img src="./img/cross.svg" alt="Delete" width="18" height="18">
+						</button>
+          </div>
+        </li>
+      </ul>
+      <div class="card-form">
+        <div class="card-form__header">Добавить новую задачу</div>
+        <div class="card-form__body">
+          <form id="form">
+            <div class="form__wrapper">
+              <input type="text" class="form__control" id="taskInput" placeholder="Текст задачи" required>
+              <small id="emailHelp" class="form__text">Что делаем собираемся сделать?</small>
+            </div>
+            <button type="submit" class="form__button">Добавить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>created by <a href="https://github.com/Vylich">Ilya Sidorenko</a></p>
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
 </body>
 </html>
