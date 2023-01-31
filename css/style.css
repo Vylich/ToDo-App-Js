@@ -8,8 +8,11 @@ html {
 
 .page {
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
-  display: flex;
+  background-blend-mode: screen;
+	background:
+		linear-gradient(limegreen, transparent),
+		linear-gradient(90deg, skyblue, transparent),
+		linear-gradient(-90deg, coral, transparent);  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
