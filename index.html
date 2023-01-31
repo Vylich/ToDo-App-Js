@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ToDo App Js</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="page">
@@ -29,22 +32,22 @@
           </div>
         </li>
       </ul>
-      <div class="card-form">
-        <div class="card-form__header">Добавить новую задачу</div>
-        <div class="card-form__body">
-          <form id="form">
-            <div class="form__wrapper">
-              <input type="text" class="form__control" id="taskInput" placeholder="Текст задачи" required>
-              <small id="emailHelp" class="form__text">Что делаем собираемся сделать?</small>
-            </div>
-            <button type="submit" class="form__button">Добавить</button>
-          </form>
-        </div>
+    </div>
+    <div class="card-form">
+      <div class="card-form__header">Добавить новую задачу</div>
+      <div class="card-form__body">
+        <form id="form" class="form">
+          <div class="form__wrapper">
+            <input type="text" class="form__control" id="taskInput" placeholder="Текст задачи" required>
+            <small id="emailHelp" class="form__text">Что делаем собираемся сделать?</small>
+          </div>
+          <button type="submit" class="form__button">Добавить</button>
+        </form>
       </div>
     </div>
-    <div class="copyright">
-      <p>created by <a href="https://github.com/Vylich">Ilya Sidorenko</a></p>
-    </div>
+  </div>
+  <div class="copyright">
+    <p>created by <a href="https://github.com/Vylich">Ilya Sidorenko</a></p>
   </div>
   <script src="./js/main.js"></script>
 </body>
