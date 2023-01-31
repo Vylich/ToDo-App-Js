@@ -2,16 +2,20 @@ html {
   height: 100vh;
 }
 
+.none {
+  display: none;
+}
+
 .page {
   font-family: 'Montserrat', sans-serif;
-  background-color: #e4e5e6;
+  background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding: 0;
-  font-size: 1rem;
+  padding: 0 1em;
+  font-size: 1em;
   height: 100%;
 }
 
@@ -41,7 +45,7 @@ html {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: #ffffffa6;
   border-radius: 0.25rem;
   background-clip: border-box;
   margin-bottom: 1.5em;
@@ -58,6 +62,7 @@ html {
 }
 
 .tasks__wrapper {
+  counter-reset: tasks;
   display: flex;
   flex-direction: column;
   padding-left: 0;
@@ -84,9 +89,8 @@ html {
 .tasks__item {
   position: relative;
   display: block;
-  padding: .75rem 1.25rem;
+  padding: 0.75em 1.25em;
   margin-bottom: -1px;
-  background-color: rgb(255, 255, 255);
   border: 1px solid rgba(0,0,0,0.125);
 }
 
@@ -113,6 +117,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .task__buttons {
@@ -123,19 +128,23 @@ html {
 .task__button {
   border: none;
   outline: none;
-  background-color: #e0e5ea;
+  background-color: rgba(184, 184, 184, 0.877);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px 10px;
-  opacity: 0.5;
+  opacity: 1;
   border-radius: 4px;
   transition: 0.2s ease-in-out;
 }
 
 .task__button:hover {
-  opacity: 1;
+  opacity: 0.5;
+}
+
+.task__button img {
+  pointer-events: none;
 } 
 
 .card-form__header {
@@ -150,7 +159,7 @@ html {
   display: flex;
   flex-direction: column;
   padding: 1.2em;
-  background-color: #ffffff;
+  background-color: #ffffffc4;
 }
 
 .form__wrapper {
@@ -187,6 +196,36 @@ html {
   color: #ffffff;
   font-size: 0.9em;
   font-weight: 600;
+  transition: 0.3s ease-in-out;
 }
 
+.form__button:hover {
+  opacity: 0.6;
+}
+
+.task__title--done {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.task__title--done.task__title::after {
+  background-color: red;
+}
+
+.task__title::after {
+  position: absolute;
+  font-size: 0.7em;
+  top: 3px;
+  left: 4px;
+  color: #ffffff;
+  background-color: rgba(126, 175, 248, 0.877);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  counter-increment: tasks;
+  content: counter(tasks);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
